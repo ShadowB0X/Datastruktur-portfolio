@@ -1,0 +1,48 @@
+:root {
+    --cell-size: 16px;
+    --gap: 1px;
+    --dead: #1f2937;
+    --alive: #10b981;
+    --grid-bg: #111827;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    color: #e5e7eb;
+    background: #0b1220;
+  }
+  header { padding: 12px 16px; }
+  h1 { margin: 0 0 8px; font-size: 18px; }
+  .panel { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button, input {
+    background: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  button:hover { background: #2b3648; cursor: pointer; }
+  .gen { margin-left: 8px; }
+  main { padding: 12px 16px; }
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(var(--rows), var(--cell-size));
+    grid-template-columns: repeat(var(--cols), var(--cell-size));
+    gap: var(--gap);
+    background: var(--grid-bg);
+    width: max-content;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 6px;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background: var(--dead);
+    border-radius: 2px;
+    transition: background-color 80ms linear;
+  }
+  .cell.alive { background: var(--alive); }

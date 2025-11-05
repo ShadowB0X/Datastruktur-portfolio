@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Life (simpel)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Conway’s Game of Life</h1>
+    <div class="panel">
+      <button id="btn-clear">Clear</button>
+
+      <label for="rnd-count">Tilfældige celler:</label>
+      <input id="rnd-count" type="number" min="1" value="50" placeholder="fx 50" />
+
+      <button id="btn-random">Add random</button>
+
+      <span class="gen">Generation: <strong id="gen">0</strong></span>
+
+      <label for="speed">Speed (ms):</label>
+      <input id="speed" type="number" min="50" step="50" value="500" placeholder="fx 500" />
+
+      <button id="btn-pause">Pause</button>
+      <button id="btn-play">Play</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
